@@ -13,16 +13,17 @@
       "icon": "fas fa-shield-halved"
     },
     {
-      "title": "AWS Cloud Practitioner",
-      "status": "Upcoming",
-      "description": "Entry-level AWS certification for cloud fundamentals",
-      "progress": 20,
+      "title": "Computer Science for Web Programming",
+      "status": "Completed",
+      "description": "a program offered by HarvardX, in collaboration with edX.",
+      "progress": 100,
       "topics": [
-        "Cloud Concepts",
-        "AWS Services",
-        "Pricing & Support"
+        "Python & Django  HTML",
+        "CSS & JavaScript  React.js  SQL & Databases  REST APIs  Git & Deployment  Web Security & Performance  Full-Stack Web Development"
       ],
-      "icon": "fab fa-aws"
+      "icon": "fab fa-aws",
+      "certificate_link": "https://credentials.edx.org/credentials/c437ffc2fc944b3bb1642527f4395343/",
+      "image": "/assets/uploads/dc1660e9-7582-4129-acab-5bdb405696b0-.png"
     },
     {
       "title": "ISTQB Foundation",
