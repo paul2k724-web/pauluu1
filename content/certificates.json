@@ -1,17 +1,15 @@
 {
   "items": [
     {
-      "title": "CompTIA Security+",
-      "status": "In Progress",
-      "description": "Foundation certification for cybersecurity professionals",
-      "progress": 35,
+      "title": "Cloud Solutions Architecture - edx",
+      "status": "Completed",
+      "description": "a program offered by AWS, in collaboration with edX.",
+      "progress": 100,
       "topics": [
-        "Threats & Vulnerabilities",
-        "Network Security",
-        "Identity Management"
+        "many"
       ],
-      "image": "assets/uploads/test-project.png",
-      "certificate_link": "https://www.comptia.org/certifications/security",
+      "image": "/assets/uploads/70023454-35b1-4585-950d-64f03c6941b3-.png",
+      "certificate_link": "https://credentials.edx.org/credentials/7eca67715e254ef796ca058bb65be429/",
       "icon": "fas fa-shield-halved"
     },
     {
