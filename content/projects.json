@@ -1,26 +1,59 @@
 {
   "items": [
     {
-      "live_link": "kkkkkkkkkkkkkkkkkk",
-      "icon_class": "fas fa-laptop-code",
-      "learnings": [
-        "kkkkkkkkkkkkkk"
-      ],
-      "github_link": "lkkkkkkk",
-      "title": "paul",
-      "image": "/assets/uploads/profilepic.jpeg",
-      "description": "kkkkkkkkkkkkkkkk",
-      "category": "uujjjjjjjjj",
+      "title": "Personal Landing Page",
+      "category": "Web Development",
+      "description": "My first responsive website built from scratch using HTML and CSS.",
       "tech_stack": [
-        "kkkkkkkkkkkkkk"
-      ]
+        "HTML5",
+        "CSS3",
+        "Responsive"
+      ],
+      "learnings": [
+        "HTML semantic structure",
+        "CSS Flexbox layout",
+        "Mobile-first design"
+      ],
+      "icon_class": "fas fa-laptop-code",
+      "image": "assets/uploads/test-project.png",
+      "live_link": "#",
+      "github_link": "#"
     },
     {
-      "icon_class": "fas fa-laptop-code",
-      "title": "zoo",
-      "category": "zoo",
-      "description": "zoo",
-      "image": "https://www.freepik.com/free-photos-vectors/animal"
+      "title": "Simple Calculator",
+      "category": "JavaScript",
+      "description": "A functional calculator with basic operations built with vanilla JavaScript.",
+      "tech_stack": [
+        "JavaScript",
+        "CSS Grid",
+        "Events"
+      ],
+      "learnings": [
+        "DOM manipulation",
+        "Event handling",
+        "JavaScript functions"
+      ],
+      "icon_class": "fas fa-calculator",
+      "live_link": "#",
+      "github_link": "#"
+    },
+    {
+      "title": "Task Manager",
+      "category": "React Basics",
+      "description": "A To-Do app to manage daily tasks with add, delete, and mark as complete features.",
+      "tech_stack": [
+        "React",
+        "State",
+        "Props"
+      ],
+      "learnings": [
+        "React components",
+        "State management",
+        "Props passing"
+      ],
+      "icon_class": "fas fa-list-check",
+      "live_link": "#",
+      "github_link": "#"
     }
   ]
 }

@@ -1,16 +1,42 @@
 {
   "items": [
     {
-      "title": "Cloud Solutions Architecture - edx",
-      "status": "Completed",
+      "title": "CompTIA Security+",
+      "status": "In Progress",
+      "description": "Foundation certification for cybersecurity professionals",
+      "progress": 35,
+      "topics": [
+        "Threats & Vulnerabilities",
+        "Network Security",
+        "Identity Management"
+      ],
+      "image": "assets/uploads/test-project.png",
+      "certificate_link": "https://www.comptia.org/certifications/security",
+      "icon": "fas fa-shield-halved"
+    },
+    {
+      "title": "AWS Cloud Practitioner",
+      "status": "Upcoming",
       "description": "Entry-level AWS certification for cloud fundamentals",
-      "progress": 100,
+      "progress": 20,
       "topics": [
         "Cloud Concepts",
         "AWS Services",
         "Pricing & Support"
       ],
       "icon": "fab fa-aws"
+    },
+    {
+      "title": "ISTQB Foundation",
+      "status": "Planned",
+      "description": "International software testing qualification",
+      "progress": 10,
+      "topics": [
+        "Testing Fundamentals",
+        "Test Techniques",
+        "Test Management"
+      ],
+      "icon": "fas fa-certificate"
     }
   ]
 }

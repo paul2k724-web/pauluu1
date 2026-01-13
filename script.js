@@ -14,35 +14,54 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 async function loadContent() {
-    try {
-        await Promise.all([
-            fetchAndRender('content/skills.json', renderSkills),
-            fetchAndRender('content/timeline.json', renderTimeline),
-            fetchAndRender('content/projects.json', renderProjects),
-            fetchAndRender('content/certificates.json', renderCertificates)
-        ]);
-
-        // Re-initialize animations after content is loaded
-        setTimeout(() => {
-            initScrollAnimations();
-            initTiltEffect();
-            initProgressBars();
-        }, 100);
-
-    } catch (error) {
-        console.error('Error loading content:', error);
-    }
+    // Load content independently with caching for instant load
+    const contentTasks = [
+        fetchAndRender('content/skills.json', renderSkills, 'skills_cache_v1'),
+        fetchAndRender('content/timeline.json', renderTimeline, 'timeline_cache_v1'),
+        fetchAndRender('content/projects.json', renderProjects, 'projects_cache_v1'),
+        fetchAndRender('content/certificates.json', renderCertificates, 'certs_cache_v1')
+    ];
 }
 
-async function fetchAndRender(url, renderCallback) {
+async function fetchAndRender(url, renderCallback, cacheKey) {
+    // 1. Cache Strategy: Render immediately if available
+    const cached = localStorage.getItem(cacheKey);
+    if (cached) {
+        try {
+            const data = JSON.parse(cached);
+            if (Array.isArray(data)) {
+                renderCallback(data);
+                refreshAnimations();
+            }
+        } catch (e) {
+            console.warn('Cache error:', e);
+        }
+    }
+
+    // 2. Network Strategy: Fetch fresh data, render, and update cache
     try {
         const response = await fetch(url);
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const data = await response.json();
+
+        // Render fresh data
         renderCallback(data.items);
+        refreshAnimations();
+
+        // Update cache
+        localStorage.setItem(cacheKey, JSON.stringify(data.items));
     } catch (e) {
-        console.warn(`Failed to load ${url}, falling back to static or empty state.`, e);
+        console.warn(`Failed to load ${url}`, e);
     }
+}
+
+function refreshAnimations() {
+    // Re-init animations for newly added content
+    requestAnimationFrame(() => {
+        initScrollAnimations();
+        initTiltEffect();
+        initProgressBars();
+    });
 }
 
 function renderSkills(skills) {
@@ -97,9 +116,12 @@ function renderProjects(projects) {
     container.innerHTML = projects.map(project => `
         <div class="project-card glass-card animate-on-scroll" data-tilt>
             <div class="project-image">
-                <div class="project-placeholder">
-                    <i class="${project.icon_class || 'fas fa-laptop-code'}"></i>
-                </div>
+                ${project.image ?
+            `<img src="${project.image}" alt="${project.title}" class="project-img-content">` :
+            `<div class="project-placeholder">
+                        <i class="${project.icon_class || 'fas fa-laptop-code'}"></i>
+                    </div>`
+        }
                 <div class="project-overlay">
                     ${project.live_link ? `<a href="${project.live_link}" class="project-link"><i class="fas fa-external-link-alt"></i></a>` : ''}
                     ${project.github_link ? `<a href="${project.github_link}" class="project-link"><i class="fab fa-github"></i></a>` : ''}
@@ -138,9 +160,13 @@ function renderCertificates(certs) {
                 <span>${cert.status}</span>
             </div>
             <div class="cert-icon">
-                <i class="${cert.icon || 'fas fa-certificate'}"></i>
+                ${cert.image ?
+                `<img src="${cert.image}" alt="${cert.title}" class="cert-image">` :
+                `<i class="${cert.icon || 'fas fa-certificate'}"></i>`
+            }
             </div>
             <h3 class="cert-title">${cert.title}</h3>
+            ${cert.certificate_link ? `<a href="${cert.certificate_link}" target="_blank" class="cert-link">View Certificate <i class="fas fa-external-link-alt"></i></a>` : ''}
             <p class="cert-description">${cert.description}</p>
             <div class="cert-progress">
                 <div class="cert-progress-bar" style="--progress: ${cert.progress || 0}%"></div>
@@ -425,17 +451,42 @@ function initContactForm() {
                 button.querySelector('.btn-text').textContent = 'Sending...';
                 button.disabled = true;
 
-                setTimeout(() => {
-                    button.querySelector('.btn-text').textContent = 'Message Sent!';
-                    button.style.background = 'linear-gradient(135deg, #00ff88 0%, #00cc6a 100%)';
+                // Send to FormSubmit.co
+                const formData = new FormData(form);
 
-                    setTimeout(() => {
-                        form.reset();
-                        button.querySelector('.btn-text').textContent = originalText;
-                        button.style.background = '';
-                        button.disabled = false;
-                    }, 3000);
-                }, 1500);
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            button.querySelector('.btn-text').textContent = 'Message Sent!';
+                            button.style.background = 'linear-gradient(135deg, #00ff88 0%, #00cc6a 100%)';
+                            form.reset();
+
+                            setTimeout(() => {
+                                button.querySelector('.btn-text').textContent = originalText;
+                                button.style.background = '';
+                                button.disabled = false;
+                            }, 3000);
+                        } else {
+                            throw new Error('Form submission failed');
+                        }
+                    })
+                    .catch(error => {
+                        button.querySelector('.btn-text').textContent = 'Error! Try again.';
+                        button.style.background = 'var(--error-color, #ff4757)';
+                        console.error('Submission error:', error);
+
+                        setTimeout(() => {
+                            button.querySelector('.btn-text').textContent = originalText;
+                            button.style.background = '';
+                            button.disabled = false;
+                        }, 3000);
+                    });
             }
         });
     }
