@@ -1,0 +1,74 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "content"
+    label: "Site Content"
+    files:
+      - name: "projects"
+        label: "Projects"
+        file: "content/projects.json"
+        fields:
+          - name: "items"
+            label: "Projects List"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Category", name: "category", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Image", name: "image", widget: "image", required: false}
+              - {label: "Tech Stack", name: "tech_stack", widget: "list"}
+              - {label: "Learnings", name: "learnings", widget: "list"}
+              - {label: "Live Link", name: "live_link", widget: "string", required: false}
+              - {label: "GitHub Link", name: "github_link", widget: "string", required: false}
+              - {label: "Icon Class", name: "icon_class", widget: "string", default: "fas fa-laptop-code"}
+
+      - name: "certificates"
+        label: "Certificates"
+        file: "content/certificates.json"
+        fields:
+          - name: "items"
+            label: "Certificates List"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Status", name: "status", widget: "select", options: ["In Progress", "Upcoming", "Planned", "Completed"]}
+              - {label: "Description", name: "description", widget: "string"}
+              - {label: "Progress", name: "progress", widget: "number", default: 0}
+              - {label: "Topics", name: "topics", widget: "list"}
+              - {label: "Icon Class", name: "icon", widget: "string", default: "fas fa-certificate"}
+
+      - name: "timeline"
+        label: "Learning Journey"
+        file: "content/timeline.json"
+        fields:
+          - name: "items"
+            label: "Timeline Events"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Date Label", name: "date_label", widget: "string"}
+              - {label: "Sort Date", name: "date", widget: "datetime"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Tags", name: "tags", widget: "list"}
+              - {label: "Side", name: "side", widget: "select", options: ["left", "right"]}
+              - {label: "Status Class", name: "status_class", widget: "select", options: ["default", "current", "future"], default: "default"}
+
+      - name: "skills"
+        label: "Beginner Skills"
+        file: "content/skills.json"
+        fields:
+          - name: "items"
+            label: "Skill Categories"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Category ID", name: "category_id", widget: "string"}
+              - {label: "Description", name: "description", widget: "string"}
+              - {label: "Icon Class", name: "icon", widget: "string"}
+              - {label: "List Items", name: "list_items", widget: "list"}
+              - {label: "Progress", name: "progress", widget: "number"}

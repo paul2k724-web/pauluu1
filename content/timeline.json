@@ -1,0 +1,76 @@
+{
+    "items": [
+        {
+            "title": "The Beginning",
+            "date_label": "Month 1",
+            "description": "Started my tech journey by exploring different domains. Set up my development environment and created my first HTML page.",
+            "tags": [
+                "HTML Basics",
+                "VS Code Setup",
+                "Git Intro"
+            ],
+            "side": "left",
+            "status_class": "default"
+        },
+        {
+            "title": "Building Foundations",
+            "date_label": "Month 2",
+            "description": "Dove deeper into CSS styling and started learning JavaScript basics. Explored cybersecurity concepts through online courses.",
+            "tags": [
+                "CSS Styling",
+                "JS Variables",
+                "Security Basics"
+            ],
+            "side": "right",
+            "status_class": "default"
+        },
+        {
+            "title": "Cloud Discovery",
+            "date_label": "Month 3",
+            "description": "Started AWS Cloud Practitioner preparation. Built my first responsive website and learned about cloud infrastructure.",
+            "tags": [
+                "AWS Basics",
+                "Responsive Design",
+                "EC2 Concepts"
+            ],
+            "side": "left",
+            "status_class": "default"
+        },
+        {
+            "title": "Testing & Quality",
+            "date_label": "Month 4",
+            "description": "Introduced to QA concepts and manual testing. Started writing test cases for my projects and understanding SDLC.",
+            "tags": [
+                "Manual Testing",
+                "Test Cases",
+                "Bug Reports"
+            ],
+            "side": "right",
+            "status_class": "default"
+        },
+        {
+            "title": "Building Portfolio",
+            "date_label": "Current",
+            "description": "Creating this portfolio to showcase my learning journey. Combining all skills learned so far into practical projects.",
+            "tags": [
+                "Portfolio",
+                "Full Integration",
+                "GitHub Pages"
+            ],
+            "side": "left",
+            "status_class": "current"
+        },
+        {
+            "title": "Certification Prep",
+            "date_label": "Next Steps",
+            "description": "Planning to pursue CompTIA Security+ and AWS Cloud Practitioner certifications while continuing to build projects.",
+            "tags": [
+                "Security+",
+                "AWS CCP",
+                "Advanced Projects"
+            ],
+            "side": "right",
+            "status_class": "future"
+        }
+    ]
+}

@@ -1,0 +1,56 @@
+{
+    "items": [
+        {
+            "title": "Cybersecurity Basics",
+            "category_id": "cyber",
+            "description": "Learning to understand threats, vulnerabilities, and protection methods",
+            "icon": "fas fa-shield-halved",
+            "list_items": [
+                "Network Security Fundamentals",
+                "Basic Threat Analysis",
+                "Security Best Practices",
+                "Intro to Ethical Hacking"
+            ],
+            "progress": 25
+        },
+        {
+            "title": "Web Dev Basics",
+            "category_id": "web",
+            "description": "Building responsive and interactive websites from scratch",
+            "icon": "fas fa-code",
+            "list_items": [
+                "HTML5 & Semantic Markup",
+                "CSS3 & Flexbox/Grid",
+                "JavaScript Fundamentals",
+                "Responsive Design"
+            ],
+            "progress": 40
+        },
+        {
+            "title": "Cloud Fundamentals",
+            "category_id": "cloud",
+            "description": "Understanding cloud infrastructure and services",
+            "icon": "fas fa-cloud",
+            "list_items": [
+                "Cloud Computing Concepts",
+                "AWS Core Services",
+                "Basic Architecture",
+                "Storage & Databases"
+            ],
+            "progress": 20
+        },
+        {
+            "title": "QA Concepts",
+            "category_id": "qa",
+            "description": "Learning quality assurance and testing methodologies",
+            "icon": "fas fa-bug",
+            "list_items": [
+                "Manual Testing Basics",
+                "Test Case Writing",
+                "Bug Reporting",
+                "SDLC Understanding"
+            ],
+            "progress": 30
+        }
+    ]
+}

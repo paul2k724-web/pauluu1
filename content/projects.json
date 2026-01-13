@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "title": "Personal Landing Page",
+      "category": "Web Development",
+      "description": "My first responsive website built from scratch using HTML and CSS.",
+      "tech_stack": ["HTML5", "CSS3", "Responsive"],
+      "learnings": ["HTML semantic structure", "CSS Flexbox layout", "Mobile-first design"],
+      "icon_class": "fas fa-laptop-code",
+      "live_link": "#",
+      "github_link": "#"
+    },
+    {
+      "title": "Simple Calculator",
+      "category": "JavaScript",
+      "description": "A functional calculator with basic operations built with vanilla JavaScript.",
+      "tech_stack": ["JavaScript", "CSS Grid", "Events"],
+      "learnings": ["DOM manipulation", "Event handling", "JavaScript functions"],
+      "icon_class": "fas fa-calculator",
+      "live_link": "#",
+      "github_link": "#"
+    },
+    {
+      "title": "Password Strength Checker",
+      "category": "Cybersecurity",
+      "description": "A tool that analyzes password strength and provides security recommendations.",
+      "tech_stack": ["JavaScript", "Regex", "Security"],
+      "learnings": ["Regex patterns", "Security best practices", "User feedback design"],
+      "icon_class": "fas fa-shield-virus",
+      "live_link": "#",
+      "github_link": "#"
+    },
+    {
+      "title": "Test Case Manager",
+      "category": "QA Practice",
+      "description": "A simple app to create, organize, and track test cases for projects.",
+      "tech_stack": ["JavaScript", "LocalStorage", "Testing"],
+      "learnings": ["Test case structure", "Local storage", "CRUD operations"],
+      "icon_class": "fas fa-list-check",
+      "live_link": "#",
+      "github_link": "#"
+    },
+    {
+      "title": "Weather Dashboard",
+      "category": "API Integration",
+      "description": "A weather app using external API to display current conditions.",
+      "tech_stack": ["JavaScript", "REST API", "Fetch"],
+      "learnings": ["API consumption", "Async/Await", "JSON handling"],
+      "icon_class": "fas fa-cloud-sun",
+      "live_link": "#",
+      "github_link": "#"
+    },
+    {
+      "title": "Static Site on AWS S3",
+      "category": "Cloud",
+      "description": "Deployed a static website using AWS S3 bucket hosting.",
+      "tech_stack": ["AWS S3", "HTML/CSS", "Cloud"],
+      "learnings": ["S3 bucket setup", "Static hosting config", "AWS Console basics"],
+      "icon_class": "fas fa-server",
+      "live_link": "#",
+      "github_link": "#"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+    "items": [
+        {
+            "title": "CompTIA Security+",
+            "status": "In Progress",
+            "description": "Foundation certification for cybersecurity professionals",
+            "progress": 35,
+            "topics": [
+                "Threats & Vulnerabilities",
+                "Network Security",
+                "Identity Management"
+            ],
+            "icon": "fas fa-shield-halved"
+        },
+        {
+            "title": "AWS Cloud Practitioner",
+            "status": "Upcoming",
+            "description": "Entry-level AWS certification for cloud fundamentals",
+            "progress": 20,
+            "topics": [
+                "Cloud Concepts",
+                "AWS Services",
+                "Pricing & Support"
+            ],
+            "icon": "fab fa-aws"
+        },
+        {
+            "title": "ISTQB Foundation",
+            "status": "Planned",
+            "description": "International software testing qualification",
+            "progress": 10,
+            "topics": [
+                "Testing Fundamentals",
+                "Test Techniques",
+                "Test Management"
+            ],
+            "icon": "fas fa-certificate"
+        }
+    ]
+}
