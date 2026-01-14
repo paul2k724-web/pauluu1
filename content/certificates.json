@@ -46,15 +46,20 @@
       "certificate_link": "https://credentials.edx.org/credentials/7008a554fade4b4599f1a0e2185753d1/"
     },
     {
-      "progress": 99,
+      "progress": 100,
       "icon": "fas fa-certificate",
-      "image": "assets/uploads/01798422-ccac-4661-9225-451afaa10d39-.png",
-      "title": "mm",
-      "status": "In Progress",
-      "description": "kkkk",
+      "image": "assets/uploads/e9ea1399-9557-4d56-add7-0a77bceb164a-.png",
+      "title": "Information Technology (IT) Support PC",
+      "status": "Completed",
+      "description": "a program offered by IBM, in collaboration with edX.",
       "topics": [
-        "lll"
-      ]
+        "Hardware",
+        "operating systems",
+        "networking",
+        "troubleshooting",
+        "cybersecurity basics"
+      ],
+      "certificate_link": "https://credentials.edx.org/credentials/1bca0ee144214ee7b81df4ecce004ef1"
     }
   ]
 }
