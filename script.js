@@ -25,10 +25,10 @@ function fixImagePath(path) {
 async function loadContent() {
     // Load content independently with caching for instant load
     const contentTasks = [
-        fetchAndRender('content/skills.json', renderSkills, 'skills_cache_v1'),
-        fetchAndRender('content/timeline.json', renderTimeline, 'timeline_cache_v1'),
-        fetchAndRender('content/projects.json', renderProjects, 'projects_cache_v1'),
-        fetchAndRender('content/certificates.json', renderCertificates, 'certs_cache_v1')
+        fetchAndRender('content/skills.json', renderSkills, 'skills_cache_v2'),
+        fetchAndRender('content/timeline.json', renderTimeline, 'timeline_cache_v2'),
+        fetchAndRender('content/projects.json', renderProjects, 'projects_cache_v2'),
+        fetchAndRender('content/certificates.json', renderCertificates, 'certs_cache_v2')
     ];
 }
 
@@ -49,7 +49,7 @@ async function fetchAndRender(url, renderCallback, cacheKey) {
 
     // 2. Network Strategy: Fetch fresh data, render, and update cache
     try {
-        const response = await fetch(url);
+        const response = await fetch(`${url}?t=${Date.now()}`);
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const data = await response.json();
 
