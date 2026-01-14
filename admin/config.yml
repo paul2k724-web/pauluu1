@@ -2,8 +2,8 @@ backend:
   name: github
   repo: paul2k724-w/pauluu1
   branch: main
-  base_url: https://decap-cms-oauth-gh.vercel.app
-  auth_endpoint: api/auth
+  base_url: https://sveltia-cms-auth.paulbandlab.workers.dev
+  auth_endpoint: auth
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
