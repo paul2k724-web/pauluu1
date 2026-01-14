@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: paul2k724-w/pauluu1
+  repo: paul2k724-web/pauluu1
   branch: main
   base_url: https://sveltia-cms-auth.paulbandlab.workers.dev
   auth_endpoint: auth
