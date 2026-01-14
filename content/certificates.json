@@ -123,6 +123,21 @@
       ],
       "certificate_link": "https://credentials.edx.org/credentials/8ac8014faf4b4ffcb9d9399c4db996d4",
       "image": "assets/uploads/b14abb50-efc6-4ead-b2f1-cae03977f2d9-.png"
+    },
+    {
+      "progress": 100,
+      "icon": "fas fa-certificate",
+      "title": "Solutions Architecture Job Simulation",
+      "status": "Completed",
+      "description": "over the period of July 2025, i completed practical tasks in: Designing a simple, scalable, hosting architecture",
+      "topics": [
+        "Solution architecture fundamentals",
+        "system design",
+        "scalability concepts",
+        "real-world architectural decision-making"
+      ],
+      "image": "assets/uploads/95a87e0f-6de6-470a-9840-7dfd5cfd6c86-.png",
+      "certificate_link": "https://www.theforage.com/completion-certificates/pmnMSL4QiQ9JCgE3W/kkE9HyeNcw6rwCRGw_pmnMSL4QiQ9JCgE3W_ifPG3o5qPCABErKGs_1752945946476_completion_certificate.pdf"
     }
   ]
 }
