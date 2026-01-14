@@ -78,6 +78,21 @@
         "AI libraries",
         "Deployment fundamentals"
       ]
+    },
+    {
+      "progress": 100,
+      "icon": "fas fa-certificate",
+      "title": "Linux and Git",
+      "status": "Completed",
+      "description": "Linux command line, Git & GitHub, open-source collaboration, software development best practices",
+      "topics": [
+        "Linux command line",
+        "Git & GitHub",
+        "open-source collaboration",
+        "software development best practices"
+      ],
+      "image": "assets/uploads/b318fe84-c0e7-42b1-9dcb-796604a146a8-.png",
+      "certificate_link": "https://credentials.edx.org/credentials/7f124d298fe84af48bb562728890a2cf"
     }
   ]
 }
