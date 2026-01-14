@@ -60,6 +60,24 @@
         "cybersecurity basics"
       ],
       "certificate_link": "https://credentials.edx.org/credentials/1bca0ee144214ee7b81df4ecce004ef1"
+    },
+    {
+      "progress": 100,
+      "icon": "fas fa-certificate",
+      "certificate_link": "https://www.datacamp.com/certificate/AIEDA0011944788422",
+      "title": "AI Engineer for Developers Associate certificate",
+      "status": "Completed",
+      "description": "Ai engineering for DEVS cert from datacamp",
+      "image": "assets/uploads/85c150a9-5cbc-45d0-b89c-61663f1ef5fb-.png",
+      "topics": [
+        "Python",
+        "SQL",
+        "Data cleaning",
+        "Machine learning basics",
+        "Model evaluation",
+        "AI libraries",
+        "Deployment fundamentals"
+      ]
     }
   ]
 }
